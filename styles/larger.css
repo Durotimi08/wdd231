@@ -1,0 +1,105 @@
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+  /* Header adjustments */
+  header {
+    padding: 1.5rem 0;
+  }
+
+  header img {
+    width: 120px;
+    height: 120px;
+  }
+
+  header span {
+    font-size: 2rem;
+  }
+
+  /* Navigation for larger screens */
+  nav {
+    background-color: #2c3e50;
+    margin: 0 -1rem;
+  }
+
+  nav button {
+    display: none; /* Hide hamburger button */
+  }
+
+  nav ul {
+    display: flex !important; /* Always display nav items */
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  nav ul li {
+    border-top: none;
+    flex: 1;
+    text-align: center;
+  }
+
+  nav ul li a {
+    padding: 1rem;
+  }
+
+  /* Main content adjustments */
+  main {
+    padding: 2rem 0;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  /* Course cards grid for larger screens */
+  .course-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Filter buttons */
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-buttons button {
+    margin-bottom: 0;
+  }
+}
+
+/* Even larger screens */
+@media screen and (min-width: 1024px) {
+  /* Course cards grid for even larger screens */
+  .course-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Additional layout adjustments */
+  body {
+    padding: 0 2rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+
+  main h1 {
+    grid-column: 1 / -1;
+  }
+
+  .about-me {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .certificate {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+  }
+
+  .learning-activities {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+}

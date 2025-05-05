@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD231 Course Assignment - Personal Portfolio">
+  <meta name="author" content="Ibrahim Oluwadurotimi">
+  <title>WDD231 | Ibrahim Oluwadurotimi | Home</title>
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap"
+    rel="stylesheet">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <img src="images/profile.webp" alt="Oluwadurotimi Profile Photo" width="100" height="100">
+    <span>Ibrahim Oluwadurotimi</span>
+  </header>
+
+  <nav>
+    <button id="hamburgerBtn">&#9776;</button>
+    <ul id="primaryNav">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="chamber/index.html">Chamber</a></li>
+      <li><a href="final/index.html">Final</a></li>
+      <li><a href="https://github.com/Durotimi08" target="_blank">GitHub Profile</a></li>
+      <li><a href="https://www.linkedin.com/in/oluwa-durotimi" target="_blank">LinkedIn</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="about-me">
+      <h2>About Me</h2>
+      <p>Welcome to my WDD231 course website. I am a student studying Web Development. This site showcases my learning
+        journey and projects throughout the course.</p>
+    </section>
+
+    <section class="certificate">
+      <h2>Web and Computer Programming Certificate</h2>
+      <div class="filter-buttons">
+        <button id="allCoursesBtn" class="active">All Courses</button>
+        <button id="wddCoursesBtn">WDD Courses</button>
+        <button id="cseCoursesBtn">CSE Courses</button>
+      </div>
+      <div id="courseCards" class="course-cards"></div>
+      <p>Total Credits: <span id="totalCredits">0</span></p>
+    </section>
+
+    <section class="learning-activities">
+      <h2>Learning Activities</h2>
+      <p>This section will contain links to my learning activities and assignments as I progress through the course.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Ibrahim Oluwadurotimi, Ibadan Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+
+</html>
