@@ -1,0 +1,87 @@
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+  /* Header adjustments */
+  header {
+    padding: 1rem 2rem;
+  }
+
+  .header-content {
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .site-name h1 {
+    font-size: 2rem;
+  }
+
+  .site-name p {
+    font-size: 1rem;
+  }
+
+  /* Navigation for larger screens */
+  nav {
+    padding: 0 2rem;
+  }
+
+  nav button {
+    display: none; /* Hide hamburger button */
+  }
+
+  nav ul {
+    display: flex !important; /* Always display nav items */
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    border-top: none;
+    flex: 1;
+    text-align: center;
+  }
+
+  nav ul li a {
+    padding: 1rem;
+  }
+
+  /* Main content adjustments */
+  main {
+    padding: 2rem;
+  }
+
+  /* Directory page adjustments */
+  #members-container.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer adjustments */
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .contact-info {
+    text-align: right;
+  }
+}
+
+/* Even larger screens */
+@media screen and (min-width: 1024px) {
+  /* Directory page adjustments */
+  #members-container.grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* List view adjustments */
+  #members-container.list .member-card {
+    grid-template-columns: 100px 2fr 1fr;
+  }
+
+  #members-container.list .member-card .member-contact {
+    text-align: right;
+  }
+}

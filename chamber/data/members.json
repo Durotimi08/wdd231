@@ -1,0 +1,76 @@
+{
+  "members": [
+    {
+      "name": "TechSolutions Inc.",
+      "address": "123 Innovation Way, Cityville, ST 12345",
+      "phone": "(555) 123-4567",
+      "website": "https://www.techsolutions.example",
+      "image": "techsolutions.png",
+      "membershipLevel": 3,
+      "description": "Leading provider of IT solutions and services for businesses of all sizes."
+    },
+    {
+      "name": "Green Valley Farms",
+      "address": "456 Harvest Road, Cityville, ST 12345",
+      "phone": "(555) 234-5678",
+      "website": "https://www.greenvalleyfarms.example",
+      "image": "greenvalley.png",
+      "membershipLevel": 2,
+      "description": "Local organic farm providing fresh produce to the community."
+    },
+    {
+      "name": "Metro Financial Services",
+      "address": "789 Money Lane, Cityville, ST 12345",
+      "phone": "(555) 345-6789",
+      "website": "https://www.metrofinancial.example",
+      "image": "metrofinancial.png",
+      "membershipLevel": 3,
+      "description": "Comprehensive financial planning and investment services."
+    },
+    {
+      "name": "Sunshine Bakery",
+      "address": "101 Sweet Street, Cityville, ST 12345",
+      "phone": "(555) 456-7890",
+      "website": "https://www.sunshinebakery.example",
+      "image": "sunshine.png",
+      "membershipLevel": 1,
+      "description": "Family-owned bakery specializing in artisan breads and pastries."
+    },
+    {
+      "name": "Cityville Medical Center",
+      "address": "202 Health Avenue, Cityville, ST 12345",
+      "phone": "(555) 567-8901",
+      "website": "https://www.cityvillemedical.example",
+      "image": "medical.png",
+      "membershipLevel": 3,
+      "description": "Comprehensive healthcare services for the entire family."
+    },
+    {
+      "name": "Quick Fix Auto Repair",
+      "address": "303 Mechanic Drive, Cityville, ST 12345",
+      "phone": "(555) 678-9012",
+      "website": "https://www.quickfixauto.example",
+      "image": "quickfix.png",
+      "membershipLevel": 2,
+      "description": "Professional automotive repair and maintenance services."
+    },
+    {
+      "name": "Bright Future Education",
+      "address": "404 Learning Lane, Cityville, ST 12345",
+      "phone": "(555) 789-0123",
+      "website": "https://www.brightfuture.example",
+      "image": "education.png",
+      "membershipLevel": 1,
+      "description": "Educational resources and tutoring for students of all ages."
+    },
+    {
+      "name": "Cityville Fitness Center",
+      "address": "505 Workout Way, Cityville, ST 12345",
+      "phone": "(555) 890-1234",
+      "website": "https://www.cityvillefitness.example",
+      "image": "fitness.png",
+      "membershipLevel": 2,
+      "description": "State-of-the-art fitness facility with personal training services."
+    }
+  ]
+}
