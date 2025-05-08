@@ -1,5 +1,6 @@
 /* Media query for larger screens */
 @media screen and (min-width: 768px) {
+
   /* Header adjustments */
   header {
     padding: 1rem 2rem;
@@ -29,11 +30,13 @@
   }
 
   nav button {
-    display: none; /* Hide hamburger button */
+    display: none;
+    /* Hide hamburger button */
   }
 
   nav ul {
-    display: flex !important; /* Always display nav items */
+    display: flex !important;
+    /* Always display nav items */
     justify-content: space-around;
   }
 
@@ -52,9 +55,62 @@
     padding: 2rem;
   }
 
+  /* Home page adjustments */
+  main.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1.5rem;
+  }
+
+  /* Hero section spans full width */
+  .hero {
+    grid-column: 1 / -1;
+  }
+
+  .hero-image {
+    height: 400px;
+  }
+
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+
+  /* Events section */
+  .events {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  /* Weather section */
+  .weather {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  /* Spotlights section */
+  .spotlights {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+  }
+
+  .spotlight-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .spotlight-card {
+    flex: 1 1 calc(50% - 0.75rem);
+  }
+
   /* Directory page adjustments */
   #members-container.grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* List view adjustments */
+  #members-container.list .member-card {
+    grid-template-columns: 100px 1fr;
   }
 
   /* Footer adjustments */
@@ -71,6 +127,45 @@
 
 /* Even larger screens */
 @media screen and (min-width: 1024px) {
+
+  /* Home page adjustments for larger screens */
+  main.home {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  /* Hero section spans full width */
+  .hero {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  .hero-image {
+    height: 500px;
+  }
+
+  /* Events section */
+  .events {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+
+  /* Weather section */
+  .weather {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+
+  /* Spotlights section */
+  .spotlights {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+  }
+
+  .spotlight-card {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+
   /* Directory page adjustments */
   #members-container.grid {
     grid-template-columns: repeat(3, 1fr);

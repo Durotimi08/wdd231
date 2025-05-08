@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Metro Chamber of Commerce - Supporting local businesses and economic growth in our community">
+  <meta name="author" content="Ibrahim Oluwadurotimi">
+
+  <meta property="og:title" content="Metro Chamber of Commerce - Home">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/chamber-logo.png">
+  <meta property="og:url" content="https://ibrahimdurotimi.github.io/wdd231/chamber/index.html">
+
+  <title>Home | Metro Chamber of Commerce</title>
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlight.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <img src="images/chamber-logo.png" alt="Chamber of Commerce Logo" class="logo">
+      <div class="site-name">
+        <h1>Metro Chamber</h1>
+        <p>of Commerce</p>
+      </div>
+    </div>
+    <nav>
+      <button id="hamburgerBtn">☰</button>
+      <ul id="primaryNav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="home">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Welcome to Metro Chamber of Commerce</h2>
+        <p>Supporting local businesses and economic growth in our community</p>
+        <a href="join.html" class="cta-button">Join the Chamber</a>
+      </div>
+      <img src="images/hero-image.jpeg" alt="Downtown cityscape of our community" class="hero-image">
+    </section>
+
+    <!-- Current Events Section -->
+    <section class="events">
+      <h2>Current Events</h2>
+      <div class="event-card">
+        <h3>Business Networking Breakfast</h3>
+        <p class="event-date">May 15, 2025 • 7:30 AM</p>
+        <p>Join us for our monthly networking breakfast at the Grand Hotel. Connect with local business leaders and hear
+          from our guest speaker on digital marketing strategies.</p>
+        <a href="#" class="event-link">Learn More</a>
+      </div>
+      <div class="event-card">
+        <h3>Small Business Workshop</h3>
+        <p class="event-date">May 22, 2025 • 1:00 PM</p>
+        <p>Free workshop for small business owners covering topics such as financing, marketing, and business planning.
+        </p>
+        <a href="#" class="event-link">Register Now</a>
+      </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+      <h2>Local Weather</h2>
+      <div class="current-weather">
+        <div class="weather-icon">
+          <img id="weather-icon" src="/placeholder.svg" alt="Weather icon">
+        </div>
+        <div class="weather-info">
+          <p id="temperature" class="temp">--°F</p>
+          <p id="description" class="desc">Loading...</p>
+        </div>
+      </div>
+      <div class="forecast">
+        <h3>3-Day Forecast</h3>
+        <div class="forecast-container" id="forecast-container">
+        </div>
+      </div>
+    </section>
+
+    <!-- Spotlights Section -->
+    <section class="spotlights">
+      <h2>Business Spotlights</h2>
+      <div class="spotlight-container" id="spotlight-container">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/chamber-logo.png" alt="Chamber of Commerce Logo">
+        <div class="footer-name">
+          <h3>Metro Chamber of Commerce</h3>
+          <p>123 Business Ave, Cityville, ST 12345</p>
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <p>info@metrochamber.org</p>
+        <p>+1 (555) 123-4567</p>
+        <p><a href="https://maps.google.com" target="_blank">Location Map</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <p>&copy; <span id="currentYear"></span> Metro Chamber | Ibrahim Oluwadurotimi | WDD 231</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+
+</html>
