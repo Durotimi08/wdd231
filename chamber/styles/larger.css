@@ -55,6 +55,44 @@
     padding: 2rem;
   }
 
+  /* Join page adjustments */
+  .join-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .form-section {
+    flex: 2;
+  }
+
+  .membership-section {
+    flex: 1;
+  }
+
+  .membership-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Modal adjustments */
+  .modal-content {
+    margin: 10% auto;
+    max-width: 700px;
+  }
+
+  /* Thank you page adjustments */
+  .thankyou-container {
+    padding: 3rem;
+  }
+
+  .summary-item {
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .summary-item .label {
+    width: 150px;
+  }
+
   /* Home page adjustments */
   main.home {
     display: grid;
@@ -127,6 +165,12 @@
 
 /* Even larger screens */
 @media screen and (min-width: 1024px) {
+
+  /* Join page adjustments for larger screens */
+  .membership-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
 
   /* Home page adjustments for larger screens */
   main.home {

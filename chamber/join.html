@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Join the Metro Chamber of Commerce - Apply for membership and connect with local businesses">
+  <meta name="author" content="Ibrahim Oluwadurotimi">
+
+  <!-- Social Media Meta Tags -->
+  <meta property="og:title" content="Join Metro Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/chamber-logo.png">
+  <meta property="og:url" content="https://ibrahimdurotimi.github.io/wdd231/chamber/join.html">
+
+  <title>Join | Metro Chamber of Commerce</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <img src="images/chamber-logo.png" alt="Chamber of Commerce Logo" class="logo">
+      <div class="site-name">
+        <h1>Metro Chamber</h1>
+        <p>of Commerce</p>
+      </div>
+    </div>
+    <nav>
+      <button id="hamburgerBtn">☰</button>
+      <ul id="primaryNav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li class="active"><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="join">
+    <h1>Join the Chamber</h1>
+    <p class="intro-text">Become a member of the Metro Chamber of Commerce and connect with local businesses, access
+      exclusive resources, and grow your network.</p>
+
+    <div class="join-container">
+      <section class="form-section">
+        <h2>Membership Application</h2>
+        <form method="get" action="thankyou.html" id="joinForm">
+          <!-- Applicant Information -->
+          <fieldset>
+            <legend>Applicant Information</legend>
+
+            <label for="firstName">
+              First Name*
+              <input type="text" id="firstName" name="firstName" required autocomplete="given-name"
+                title="Please enter your first name">
+            </label>
+
+            <label for="lastName">
+              Last Name*
+              <input type="text" id="lastName" name="lastName" required autocomplete="family-name"
+                title="Please enter your last name">
+            </label>
+
+            <label for="title">
+              Position/Title
+              <input type="text" id="title" name="title" pattern="[A-Za-z\s-]{7,}" autocomplete="organization-title"
+                title="Please enter your position (minimum 7 characters, only letters, hyphens, and spaces)">
+              <span class="form-hint">Minimum 7 characters, letters, hyphens, and spaces only</span>
+            </label>
+
+            <label for="email">
+              Email*
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.com"
+                title="Please enter a valid email address">
+            </label>
+
+            <label for="phone">
+              Mobile Phone*
+              <input type="tel" id="phone" name="phone" required autocomplete="tel"
+                title="Please enter your mobile phone number">
+            </label>
+          </fieldset>
+
+          <!-- Business Information -->
+          <fieldset>
+            <legend>Business Information</legend>
+
+            <label for="businessName">
+              Business/Organization Name*
+              <input type="text" id="businessName" name="businessName" required autocomplete="organization"
+                title="Please enter your business or organization name">
+            </label>
+
+            <label for="membershipLevel">
+              Membership Level*
+              <select id="membershipLevel" name="membershipLevel" required title="Please select a membership level">
+                <option value="" disabled selected>Select a membership level</option>
+                <option value="np">NP Membership (Non-profit, no fee)</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+              </select>
+            </label>
+
+            <label for="description">
+              Business Description
+              <textarea id="description" name="description" rows="5"
+                title="Please provide a brief description of your business"></textarea>
+            </label>
+
+            <!-- Hidden timestamp field -->
+            <input type="hidden" id="timestamp" name="timestamp">
+          </fieldset>
+
+          <input type="submit" value="Submit Application" class="submit-btn">
+        </form>
+      </section>
+
+      <section class="membership-section">
+        <h2>Membership Levels</h2>
+        <p>Click on each membership level to learn more about the benefits.</p>
+
+        <div class="membership-cards">
+          <!-- NP Membership Card -->
+          <div class="membership-card np-card">
+            <h3>NP Membership</h3>
+            <p>For non-profit organizations</p>
+            <p class="price">Free</p>
+            <button class="info-btn" data-modal="npModal">View Benefits</button>
+          </div>
+
+          <!-- Bronze Membership Card -->
+          <div class="membership-card bronze-card">
+            <h3>Bronze Membership</h3>
+            <p>Basic membership package</p>
+            <p class="price">$50/year</p>
+            <button class="info-btn" data-modal="bronzeModal">View Benefits</button>
+          </div>
+
+          <!-- Silver Membership Card -->
+          <div class="membership-card silver-card">
+            <h3>Silver Membership</h3>
+            <p>Enhanced membership package</p>
+            <p class="price">$100/year</p>
+            <button class="info-btn" data-modal="silverModal">View Benefits</button>
+          </div>
+
+          <!-- Gold Membership Card -->
+          <div class="membership-card gold-card">
+            <h3>Gold Membership</h3>
+            <p>Premium membership package</p>
+            <p class="price">$250/year</p>
+            <button class="info-btn" data-modal="goldModal">View Benefits</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Membership Level Modals -->
+    <!-- NP Membership Modal -->
+    <div id="npModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>NP Membership Benefits</h2>
+        <p>For non-profit organizations - No fee</p>
+        <ul>
+          <li>Basic listing in the online directory</li>
+          <li>Access to chamber networking events</li>
+          <li>Monthly newsletter subscription</li>
+          <li>Opportunity to participate in community service projects</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bronze Membership Modal -->
+    <div id="bronzeModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Bronze Membership Benefits</h2>
+        <p>$50 per year</p>
+        <ul>
+          <li>Enhanced listing in the online directory</li>
+          <li>Access to chamber networking events</li>
+          <li>Monthly newsletter subscription</li>
+          <li>Discounted event tickets (10% off)</li>
+          <li>Social media mention (once per year)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Silver Membership Modal -->
+    <div id="silverModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Silver Membership Benefits</h2>
+        <p>$100 per year</p>
+        <ul>
+          <li>Premium listing in the online directory</li>
+          <li>Access to chamber networking events</li>
+          <li>Monthly newsletter subscription</li>
+          <li>Discounted event tickets (25% off)</li>
+          <li>Social media mentions (quarterly)</li>
+          <li>Business spotlight on the chamber website (once per year)</li>
+          <li>Opportunity to host a chamber event</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Gold Membership Modal -->
+    <div id="goldModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Gold Membership Benefits</h2>
+        <p>$250 per year</p>
+        <ul>
+          <li>Featured listing in the online directory</li>
+          <li>Access to chamber networking events</li>
+          <li>Monthly newsletter subscription</li>
+          <li>Free event tickets for most chamber events</li>
+          <li>Social media mentions (monthly)</li>
+          <li>Business spotlight on the chamber website (quarterly)</li>
+          <li>Opportunity to host chamber events</li>
+          <li>Logo displayed on chamber website homepage</li>
+          <li>Advertising in chamber newsletter</li>
+          <li>Priority access to sponsorship opportunities</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/chamber-logo.png" alt="Chamber of Commerce Logo">
+        <div class="footer-name">
+          <h3>Metro Chamber of Commerce</h3>
+          <p>123 Business Ave, Cityville, ST 12345</p>
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <p>info@metrochamber.org</p>
+        <p>+1 (555) 123-4567</p>
+        <p><a href="https://maps.google.com" target="_blank">Location Map</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <p>&copy; <span id="currentYear"></span> Metro Chamber | Ibrahim Oluwadurotimi | WDD 231</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+
+</html>
