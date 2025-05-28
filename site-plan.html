@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website Plan for Culinary Canvas - A Recipe Collection Website">
+  <meta name="author" content="Ibrahim Oluwadurotimi">
+  <title>Website Plan - Culinary Canvas</title>
+  <style>
+    :root {
+      --primary-color: #4a7c59;
+      --secondary-color: #f9f5f0;
+      --accent-color: #c45d3c;
+      --text-color: #333333;
+      --light-text: #ffffff;
+      --border-color: #e0e0e0;
+    }
+
+    /* Typography */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--secondary-color);
+      margin: 0;
+      padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary-color);
+    }
+
+    .accent-text {
+      font-family: 'Playfair Display', serif;
+      color: var(--accent-color);
+    }
+
+    /* Layout */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: var(--light-text);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: var(--light-text);
+      margin: 0;
+    }
+
+    section {
+      margin-bottom: 40px;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Color Swatches */
+    .color-swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      margin: 30px 0;
+      padding: 20px;
+      padding-left: 0;
+      padding-right: 40px;
+    }
+
+    .color-swatch {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      color: white;
+      text-align: left;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .color-swatch:hover {
+      transform: translateY(-5px);
+    }
+
+    .color-swatch h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.2rem;
+      color: inherit;
+    }
+
+    .color-swatch p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .color-swatch p:first-of-type {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .secondary {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      border: 1px solid var(--border-color);
+    }
+
+    .primary {
+      background-color: var(--primary-color);
+    }
+
+    .accent {
+      background-color: var(--accent-color);
+    }
+
+    .text {
+      background-color: var(--text-color);
+    }
+
+    /* Typography Examples */
+    .typography-examples {
+      margin-top: 20px;
+    }
+
+    .font-example {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
+
+    /* Wireframes */
+    .wireframes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .wireframe {
+      flex: 1;
+      min-width: 300px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    .wireframe img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid var(--border-color);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .color-swatches {
+        justify-content: center;
+      }
+
+      .wireframes {
+        flex-direction: column;
+      }
+    }
+
+    /* Buttons and Links */
+    .btn {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: var(--light-text);
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Website Plan - Culinary Canvas</h1>
+  </header>
+
+  <div class="container">
+    <section id="site-name">
+      <h2>Site Name</h2>
+      <p><span class="accent-text">Culinary Canvas</span> - A Recipe Collection Website</p>
+      <p>This name was selected because it evokes the creativity and artistry involved in cooking. The word "Canvas"
+        suggests that each recipe is a blank canvas where cooks can express their creativity, while "Culinary" clearly
+        identifies the focus on food and cooking. The alliteration makes the name memorable and appealing.</p>
+      <p>Optional domain availability: culinarycanvas.com</p>
+    </section>
+
+    <section id="site-purpose">
+      <h2>Site Purpose</h2>
+      <p>Culinary Canvas serves as a comprehensive recipe collection platform where users can discover, save, and share
+        recipes from around the world. The site provides:</p>
+      <ul>
+        <li>A curated collection of recipes organized by cuisine, meal type, dietary restrictions, and cooking time</li>
+        <li>Detailed recipe information including ingredients, step-by-step instructions, preparation time, and
+          nutritional information</li>
+        <li>The ability for users to save favorite recipes to their personal collection</li>
+        <li>A search functionality to find recipes based on available ingredients or specific criteria</li>
+        <li>A form for users to submit their own recipes for consideration</li>
+      </ul>
+      <p>The primary goal is to inspire home cooks of all skill levels to explore new flavors and techniques while
+        building a community around a shared love of food.</p>
+    </section>
+
+    <section id="scenarios">
+      <h2>Scenarios</h2>
+      <div class="scenario">
+        <h3>Scenario 1: The Busy Parent</h3>
+        <p>"I have limited time to cook dinner after work and need quick, family-friendly recipes that can be prepared
+          in under 30 minutes. How can I find recipes that match my time constraints and that my children will enjoy?"
+        </p>
+      </div>
+      <div class="scenario">
+        <h3>Scenario 2: The Health-Conscious Cook</h3>
+        <p>"I'm following a specific diet (gluten-free and low-carb) for health reasons. How can I find recipes that
+          meet my dietary restrictions but are still flavorful and satisfying?"</p>
+      </div>
+      <div class="scenario">
+        <h3>Scenario 3: The Adventurous Foodie</h3>
+        <p>"I love trying cuisines from around the world. How can I find authentic recipes from different cultures and
+          learn about the history and traditions behind these dishes?"</p>
+      </div>
+    </section>
+
+    <section id="color-schema">
+      <h2>Color Schema</h2>
+      <p>The color schema for Culinary Canvas is designed to evoke feelings of warmth, freshness, and creativity while
+        maintaining excellent readability and visual hierarchy.</p>
+
+      <div class="color-swatches">
+        <div class="color-swatch primary">
+          <h3>Primary Color</h3>
+          <p>#4a7c59</p>
+          <p>Used for headers, navigation, and accents</p>
+        </div>
+        <div class="color-swatch secondary">
+          <h3>Secondary Color</h3>
+          <p>#f9f5f0</p>
+          <p>Used for backgrounds</p>
+        </div>
+        <div class="color-swatch accent">
+          <h3>Accent Color</h3>
+          <p>#c45d3c</p>
+          <p>Used for buttons, highlights, and calls to action</p>
+        </div>
+        <div class="color-swatch text">
+          <h3>Text Color</h3>
+          <p>#333333</p>
+          <p>Used for main text content</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="typography">
+      <h2>Typography</h2>
+      <p>The typography selection for Culinary Canvas combines readability with personality, using a carefully selected
+        combination of fonts that work well together.</p>
+
+      <div class="typography-examples">
+        <div class="font-example">
+          <h3>Headings: Montserrat</h3>
+          <h1 style="font-family: 'Montserrat', sans-serif;">Heading 1 - Montserrat</h1>
+          <h2 style="font-family: 'Montserrat', sans-serif;">Heading 2 - Montserrat</h2>
+          <h3 style="font-family: 'Montserrat', sans-serif;">Heading 3 - Montserrat</h3>
+          <p>Montserrat is a clean, modern sans-serif font that provides excellent readability for headings and
+            navigation elements. Its geometric character gives the site a contemporary feel while maintaining
+            professionalism.</p>
+        </div>
+
+        <div class="font-example">
+          <h3>Body Text: Open Sans</h3>
+          <p style="font-family: 'Open Sans', sans-serif; font-size: 16px;">This is body text in Open Sans. Open Sans is
+            a humanist sans-serif typeface designed for excellent readability across print, web, and mobile interfaces.
+            Its open forms and neutral appearance make it perfect for recipe instructions and descriptions.</p>
+          <p style="font-family: 'Open Sans', sans-serif; font-size: 14px;">Smaller text in Open Sans remains highly
+            readable, making it ideal for ingredient lists and notes.</p>
+        </div>
+
+        <div class="font-example">
+          <h3>Accent Text: Playfair Display</h3>
+          <p style="font-family: 'Playfair Display', serif; font-size: 24px;">Recipe Titles in Playfair Display</p>
+          <p style="font-family: 'Playfair Display', serif; font-size: 18px;">Featured Content in Playfair Display</p>
+          <p>Playfair Display is an elegant serif font used for recipe titles and special featured content. Its
+            distinctive character adds a touch of sophistication and helps important content stand out.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="wireframes">
+      <h2>Wireframes</h2>
+      <p>The following wireframes illustrate the layout for the home page in both mobile and desktop views.</p>
+
+      <div class="wireframes">
+        <div class="wireframe">
+          <h3>Mobile View</h3>
+          <img src="images/mobile-wireframe.png" alt="Mobile wireframe for Culinary Canvas">
+          <p>The mobile view features a hamburger menu for navigation, a prominent search bar, and a vertical scrolling
+            layout for recipe cards. Filters are accessible through a collapsible menu to save space.</p>
+        </div>
+
+        <div class="wireframe">
+          <h3>Desktop View</h3>
+          <img src="images/desktop-wireframe.png" alt="Desktop wireframe for Culinary Canvas">
+          <p>The desktop view utilizes a horizontal navigation bar, a grid layout for recipe cards, and sidebar filters
+            for easy browsing. Featured recipes are highlighted in a carousel at the top of the page.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Culinary Canvas Website Plan | Ibrahim Oluwadurotimi | WDD 231</p>
+    </div>
+  </footer>
+</body>
+
+</html>
