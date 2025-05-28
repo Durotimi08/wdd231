@@ -55,6 +55,42 @@
     padding: 2rem;
   }
 
+  .discover .attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .attraction-card {
+    min-height: 550px;
+  }
+
+  .attraction-card figure img {
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .attraction-card:hover figure img {
+    transform: scale(1.08) rotate(1deg);
+    filter: brightness(1.15) contrast(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Visit message adjustments */
+  .visit-message {
+    margin: 2rem 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .visit-content {
+    padding: 1.5rem 2rem;
+  }
+
   /* Join page adjustments */
   .join-container {
     flex-direction: row;

@@ -1,0 +1,60 @@
+{
+  "attractions": [
+    {
+      "id": 1,
+      "name": "Metro Downtown Historic District",
+      "address": "Main Street, Downtown Metro, ST 12345",
+      "description": "Step back in time in our beautifully preserved historic district featuring 19th-century architecture, boutique shops, and award-winning restaurants. The cobblestone streets and Victorian-era buildings create a charming atmosphere perfect for business meetings and leisure visits.",
+      "image": "downtown-historic.webp"
+    },
+    {
+      "id": 2,
+      "name": "Riverside Business Park",
+      "address": "1500 Commerce Drive, Metro, ST 12345",
+      "description": "A modern business complex featuring state-of-the-art office spaces, conference facilities, and beautiful landscaping along the Metro River. Home to over 50 businesses and offering excellent networking opportunities for chamber members.",
+      "image": "business-park.webp"
+    },
+    {
+      "id": 3,
+      "name": "Metro Convention Center",
+      "address": "800 Convention Plaza, Metro, ST 12345",
+      "description": "Our premier event venue hosts trade shows, conferences, and business exhibitions year-round. With 100,000 square feet of flexible space and cutting-edge technology, it's the perfect location for your next corporate event.",
+      "image": "convention-center.webp"
+    },
+    {
+      "id": 4,
+      "name": "Greenway Nature Preserve",
+      "address": "2200 Nature Trail, Metro, ST 12345",
+      "description": "A 500-acre nature preserve offering hiking trails, wildlife viewing, and outdoor team-building opportunities. Many local businesses use this beautiful space for corporate retreats and employee wellness programs.",
+      "image": "nature-preserve.webp"
+    },
+    {
+      "id": 5,
+      "name": "Metro Arts & Culture Center",
+      "address": "450 Arts Boulevard, Metro, ST 12345",
+      "description": "A vibrant cultural hub featuring galleries, theaters, and performance spaces. The center hosts business networking events, cultural celebrations, and provides a sophisticated venue for corporate entertainment.",
+      "image": "arts-center.webp"
+    },
+    {
+      "id": 6,
+      "name": "Innovation Technology Hub",
+      "address": "1000 Tech Drive, Metro, ST 12345",
+      "description": "A cutting-edge technology incubator supporting startups and established tech companies. Features co-working spaces, research facilities, and regular tech meetups that foster innovation and collaboration in our business community.",
+      "image": "tech-hub.webp"
+    },
+    {
+      "id": 7,
+      "name": "Metro Farmers Market",
+      "address": "300 Market Square, Metro, ST 12345",
+      "description": "Every Saturday, local farmers and artisans gather to showcase the best of our region's produce and crafts. A popular destination that supports local agriculture and provides fresh, quality ingredients to area restaurants.",
+      "image": "farmers-market.webp"
+    },
+    {
+      "id": 8,
+      "name": "Lakeside Recreation Complex",
+      "address": "1800 Lakeshore Drive, Metro, ST 12345",
+      "description": "A comprehensive recreation facility featuring sports courts, fitness centers, and meeting rooms overlooking beautiful Metro Lake. Popular for corporate wellness programs, team building events, and business golf tournaments.",
+      "image": "recreation-complex.webp"
+    }
+  ]
+}
