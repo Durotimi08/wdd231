@@ -1881,3 +1881,8 @@ input[type="hidden"] {
   grid-column: 1 / -1;
   /* Ensure it spans full width if in grid */
 }
+
+.footer-bar a {
+  color: #fff !important;
+  text-decoration: underline;
+}
