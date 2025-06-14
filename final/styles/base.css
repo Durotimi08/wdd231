@@ -819,11 +819,6 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-.footer-section a {
-  color: var(--light-text);
-  opacity: 0.9;
-}
-
 .footer-section a:hover {
   opacity: 1;
 }
