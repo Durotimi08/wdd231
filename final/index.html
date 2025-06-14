@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Culinary Canvas - Discover, save, and share recipes from around the world. Your creative cooking journey starts here.">
+  <meta name="author" content="Ibrahim Oluwadurotimi">
+
+  <!-- Social Media Meta Tags -->
+  <meta property="og:title" content="Culinary Canvas - Recipe Collection">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/culinary-canvas-logo.jpeg">
+  <meta property="og:url" content="https://ibrahimdurotimi.github.io/wdd231/final/index.html">
+  <meta property="og:description"
+    content="Discover amazing recipes from around the world and create your own culinary masterpieces.">
+
+  <title>Culinary Canvas - Your Recipe Collection</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/home.js" type="module" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <img src="images/culinary-canvas-logo.jpeg" alt="Culinary Canvas Logo" class="logo">
+      <div class="site-name">
+        <h1>Culinary Canvas</h1>
+        <p>Your Recipe Collection</p>
+      </div>
+      <div class="header-actions">
+        <div class="header-search">
+          <input type="text" placeholder="Quick search..." id="headerSearch">
+          <button type="button" id="headerSearchBtn">🔍</button>
+        </div>
+        <div class="user-menu">
+          <div class="favorites-count" id="headerFavoritesCount">❤️ 0</div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="nav-container">
+        <button id="hamburgerBtn" aria-label="Toggle navigation menu">☰</button>
+        <ul id="primaryNav">
+          <li class="active">
+            <a href="index.html">
+              <span class="nav-icon">🏠</span>Home
+            </a>
+          </li>
+          <li>
+            <a href="recipes.html">
+              <span class="nav-icon">📖</span>Recipes
+            </a>
+          </li>
+          <li>
+            <a href="submit.html">
+              <span class="nav-icon">➕</span>Submit Recipe
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="home">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Welcome to Your Culinary Journey</h2>
+        <p>Discover amazing recipes from around the world, save your favorites, and share your own culinary creations.
+        </p>
+        <a href="recipes.html" class="cta-button">Explore Recipes</a>
+      </div>
+      <img src="images/hero-cooking.jpeg" alt="Beautiful cooking scene with fresh ingredients" class="hero-image"
+        loading="lazy">
+    </section>
+
+    <!-- Quick Search Section -->
+    <section class="quick-search">
+      <h2>Find Your Perfect Recipe</h2>
+      <div class="search-container">
+        <input type="text" id="quickSearch" placeholder="Search recipes..." aria-label="Search recipes">
+        <button id="searchBtn" aria-label="Search">🔍</button>
+      </div>
+      <div class="quick-filters">
+        <button class="filter-btn" data-filter="cuisine" data-value="italian">Italian</button>
+        <button class="filter-btn" data-filter="cuisine" data-value="asian">Asian</button>
+        <button class="filter-btn" data-filter="mealType" data-value="breakfast">Breakfast</button>
+        <button class="filter-btn" data-filter="mealType" data-value="dinner">Dinner</button>
+        <button class="filter-btn" data-filter="dietary" data-value="vegetarian">Vegetarian</button>
+      </div>
+    </section>
+
+    <!-- Featured Recipes Section -->
+    <section class="featured-recipes">
+      <h2>Featured Recipes</h2>
+      <div class="recipe-grid" id="featuredRecipes">
+        <!-- Featured recipes will be loaded here -->
+      </div>
+      <div class="view-all">
+        <a href="recipes.html" class="view-all-btn">View All Recipes</a>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+      <h2>Browse by Category</h2>
+      <div class="category-grid">
+        <div class="category-card" data-category="breakfast">
+          <img src="images/categories/breakfast.jpeg" alt="Breakfast recipes" loading="lazy">
+          <h3>Breakfast</h3>
+          <p>Start your day right</p>
+        </div>
+        <div class="category-card" data-category="lunch">
+          <img src="images/categories/lunch.jpeg" alt="Lunch recipes" loading="lazy">
+          <h3>Lunch</h3>
+          <p>Midday delights</p>
+        </div>
+        <div class="category-card" data-category="dinner">
+          <img src="images/categories/dinner.jpeg" alt="Dinner recipes" loading="lazy">
+          <h3>Dinner</h3>
+          <p>Evening feasts</p>
+        </div>
+        <div class="category-card" data-category="dessert">
+          <img src="images/categories/dessert.jpeg" alt="Dessert recipes" loading="lazy">
+          <h3>Desserts</h3>
+          <p>Sweet endings</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+      <div class="stat-item">
+        <span class="stat-number" id="totalRecipes">0</span>
+        <span class="stat-label">Recipes</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="totalCuisines">0</span>
+        <span class="stat-label">Cuisines</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="favoriteCount">0</span>
+        <span class="stat-label">Your Favorites</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Culinary Canvas</h3>
+        <p>Your creative cooking journey starts here. Discover, create, and share amazing recipes.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="recipes.html">Browse Recipes</a></li>
+          <li><a href="submit.html">Submit Recipe</a></li>
+          <li><a href="#" id="favoritesLink">My Favorites</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: hello@culinarycanvas.com</p>
+        <p>Follow us on social media</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <p>&copy; 2025 Culinary Canvas | Ibrahim Oluwadurotimi | WDD 231 Final Project</p>
+    </div>
+  </footer>
+</body>
+
+</html>

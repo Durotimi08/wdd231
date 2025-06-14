@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Thank you for submitting your recipe to Culinary Canvas. Your culinary creation has been received.">
+  <meta name="author" content="Ibrahim Oluwadurotimi">
+
+  <!-- Social Media Meta Tags -->
+  <meta property="og:title" content="Recipe Submitted - Culinary Canvas">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/culinary-canvas-logo.jpeg">
+  <meta property="og:url" content="https://ibrahimdurotimi.github.io/wdd231/final/thankyou.html">
+
+  <title>Recipe Submitted - Culinary Canvas</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/thankyou.js" type="module" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <img src="images/culinary-canvas-logo.jpeg" alt="Culinary Canvas Logo" class="logo">
+      <div class="site-name">
+        <h1>Culinary Canvas</h1>
+        <p>Your Recipe Collection</p>
+      </div>
+      <div class="header-actions">
+        <div class="header-search">
+          <input type="text" placeholder="Quick search..." id="headerSearch">
+          <button type="button" id="headerSearchBtn">🔍</button>
+        </div>
+        <div class="user-menu">
+          <div class="favorites-count" id="headerFavoritesCount">❤️ 0</div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="nav-container">
+        <button id="hamburgerBtn" aria-label="Toggle navigation menu">☰</button>
+        <ul id="primaryNav">
+          <li>
+            <a href="index.html">
+              <span class="nav-icon">🏠</span>Home
+            </a>
+          </li>
+          <li>
+            <a href="recipes.html">
+              <span class="nav-icon">📖</span>Recipes
+            </a>
+          </li>
+          <li>
+            <a href="submit.html">
+              <span class="nav-icon">➕</span>Submit Recipe
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="thankyou">
+    <div class="thankyou-container">
+      <div class="success-icon">✅</div>
+      <h1>Recipe Submitted Successfully!</h1>
+      <p>Thank you for sharing your culinary creation with the Culinary Canvas community.</p>
+
+      <div class="submission-details">
+        <h2>Submission Details</h2>
+        <div id="submissionSummary">
+          <!-- Submission details will be inserted here -->
+        </div>
+      </div>
+
+      <div class="next-steps">
+        <h2>What's Next?</h2>
+        <ol>
+          <li>Our team will review your recipe for quality and completeness</li>
+          <li>You'll receive an email confirmation within 24 hours</li>
+          <li>Once approved, your recipe will be published on our site</li>
+          <li>Share your recipe with friends and family!</li>
+        </ol>
+      </div>
+
+      <div class="action-buttons">
+        <a href="recipes.html" class="action-btn primary">Browse Recipes</a>
+        <a href="submit.html" class="action-btn secondary">Submit Another Recipe</a>
+        <a href="index.html" class="action-btn secondary">Return Home</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Culinary Canvas</h3>
+        <p>Your creative cooking journey starts here. Discover, create, and share amazing recipes.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Browse Recipes</a></li>
+          <li><a href="#" id="favoritesLink">My Favorites</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: hello@culinarycanvas.com</p>
+        <p>Follow us on social media</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <p>&copy; 2025 Culinary Canvas | Ibrahim Oluwadurotimi | WDD 231 Final Project</p>
+    </div>
+  </footer>
+</body>
+
+</html>

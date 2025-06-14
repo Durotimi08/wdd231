@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Share your favorite recipe with the Culinary Canvas community. Submit your culinary creations and inspire others.">
+  <meta name="author" content="Ibrahim Oluwadurotimi">
+
+  <!-- Social Media Meta Tags -->
+  <meta property="og:title" content="Submit Recipe - Culinary Canvas">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/culinary-canvas-logo.jpeg">
+  <meta property="og:url" content="https://ibrahimdurotimi.github.io/wdd231/final/submit.html">
+  <meta property="og:description" content="Share your favorite recipe with our community.">
+
+  <title>Submit Recipe - Culinary Canvas</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/submit.js" type="module" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <img src="images/culinary-canvas-logo.jpeg" alt="Culinary Canvas Logo" class="logo">
+      <div class="site-name">
+        <h1>Culinary Canvas</h1>
+        <p>Your Recipe Collection</p>
+      </div>
+      <div class="header-actions">
+        <div class="header-search">
+          <input type="text" placeholder="Quick search..." id="headerSearch">
+          <button type="button" id="headerSearchBtn">🔍</button>
+        </div>
+        <div class="user-menu">
+          <div class="favorites-count" id="headerFavoritesCount">❤️ 0</div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="nav-container">
+        <button id="hamburgerBtn" aria-label="Toggle navigation menu">☰</button>
+        <ul id="primaryNav">
+          <li>
+            <a href="index.html">
+              <span class="nav-icon">🏠</span>Home
+            </a>
+          </li>
+          <li>
+            <a href="recipes.html">
+              <span class="nav-icon">📖</span>Recipes
+            </a>
+          </li>
+          <li class="active">
+            <a href="submit.html">
+              <span class="nav-icon">➕</span>Submit Recipe
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="submit">
+    <h1>Share Your Recipe</h1>
+    <p class="intro-text">Share your favorite recipe with the Culinary Canvas community and inspire others to create
+      delicious meals.</p>
+
+    <form id="recipeForm" method="get" action="thankyou.html" novalidate>
+      <!-- Basic Information -->
+      <fieldset>
+        <legend>Basic Information</legend>
+
+        <label for="recipeName">
+          Recipe Name*
+          <input type="text" id="recipeName" name="recipeName" required title="Please enter the recipe name"
+            maxlength="100">
+          <span class="error-message" id="recipeNameError"></span>
+        </label>
+
+        <label for="description">
+          Description*
+          <textarea id="description" name="description" required rows="3" title="Please provide a brief description"
+            maxlength="300"></textarea>
+          <span class="error-message" id="descriptionError"></span>
+        </label>
+
+        <label for="cuisine">
+          Cuisine Type*
+          <select id="cuisine" name="cuisine" required title="Please select a cuisine type">
+            <option value="">Select Cuisine</option>
+            <option value="italian">Italian</option>
+            <option value="asian">Asian</option>
+            <option value="mexican">Mexican</option>
+            <option value="american">American</option>
+            <option value="french">French</option>
+            <option value="indian">Indian</option>
+            <option value="mediterranean">Mediterranean</option>
+            <option value="other">Other</option>
+          </select>
+          <span class="error-message" id="cuisineError"></span>
+        </label>
+
+        <label for="mealType">
+          Meal Type*
+          <select id="mealType" name="mealType" required title="Please select a meal type">
+            <option value="">Select Meal Type</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="dessert">Dessert</option>
+            <option value="snack">Snack</option>
+          </select>
+          <span class="error-message" id="mealTypeError"></span>
+        </label>
+      </fieldset>
+
+      <!-- Recipe Details -->
+      <fieldset>
+        <legend>Recipe Details</legend>
+
+        <div class="form-row">
+          <label for="prepTime">
+            Prep Time (minutes)*
+            <input type="number" id="prepTime" name="prepTime" required min="1" max="480"
+              title="Please enter prep time in minutes">
+            <span class="error-message" id="prepTimeError"></span>
+          </label>
+
+          <label for="cookTime">
+            Cook Time (minutes)*
+            <input type="number" id="cookTime" name="cookTime" required min="1" max="480"
+              title="Please enter cook time in minutes">
+            <span class="error-message" id="cookTimeError"></span>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label for="servings">
+            Servings*
+            <input type="number" id="servings" name="servings" required min="1" max="20"
+              title="Please enter number of servings">
+            <span class="error-message" id="servingsError"></span>
+          </label>
+
+          <label for="difficulty">
+            Difficulty Level*
+            <select id="difficulty" name="difficulty" required title="Please select difficulty level">
+              <option value="">Select Difficulty</option>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+            <span class="error-message" id="difficultyError"></span>
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Ingredients -->
+      <fieldset>
+        <legend>Ingredients</legend>
+        <p>Add your ingredients one by one. Include measurements and specific details.</p>
+
+        <div class="ingredient-input">
+          <input type="text" id="ingredientInput" placeholder="e.g., 2 cups all-purpose flour" maxlength="100"
+            title="Enter ingredient with measurement">
+          <button type="button" id="addIngredient">Add Ingredient</button>
+        </div>
+
+        <ul id="ingredientsList" class="ingredients-list">
+          <!-- Ingredients will be added here -->
+        </ul>
+
+        <input type="hidden" id="ingredients" name="ingredients">
+        <span class="error-message" id="ingredientsError"></span>
+      </fieldset>
+
+      <!-- Instructions -->
+      <fieldset>
+        <legend>Instructions</legend>
+        <p>Add cooking instructions step by step.</p>
+
+        <div class="instruction-input">
+          <textarea id="instructionInput" placeholder="Describe this cooking step..." rows="3" maxlength="300"
+            title="Enter cooking instruction"></textarea>
+          <button type="button" id="addInstruction">Add Step</button>
+        </div>
+
+        <ol id="instructionsList" class="instructions-list">
+          <!-- Instructions will be added here -->
+        </ol>
+
+        <input type="hidden" id="instructions" name="instructions">
+        <span class="error-message" id="instructionsError"></span>
+      </fieldset>
+
+      <!-- Dietary Information -->
+      <fieldset>
+        <legend>Dietary Information (Optional)</legend>
+
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="dietary" value="vegetarian">
+            <span class="checkmark"></span>
+            Vegetarian
+          </label>
+
+          <label class="checkbox-label">
+            <input type="checkbox" name="dietary" value="vegan">
+            <span class="checkmark"></span>
+            Vegan
+          </label>
+
+          <label class="checkbox-label">
+            <input type="checkbox" name="dietary" value="gluten-free">
+            <span class="checkmark"></span>
+            Gluten-Free
+          </label>
+
+          <label class="checkbox-label">
+            <input type="checkbox" name="dietary" value="dairy-free">
+            <span class="checkmark"></span>
+            Dairy-Free
+          </label>
+
+          <label class="checkbox-label">
+            <input type="checkbox" name="dietary" value="keto">
+            <span class="checkmark"></span>
+            Keto
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Submitter Information -->
+      <fieldset>
+        <legend>Your Information</legend>
+
+        <label for="submitterName">
+          Your Name*
+          <input type="text" id="submitterName" name="submitterName" required title="Please enter your name"
+            maxlength="50">
+          <span class="error-message" id="submitterNameError"></span>
+        </label>
+
+        <label for="submitterEmail">
+          Email Address*
+          <input type="email" id="submitterEmail" name="submitterEmail" required
+            title="Please enter a valid email address" maxlength="100">
+          <span class="error-message" id="submitterEmailError"></span>
+        </label>
+
+        <!-- Hidden timestamp field -->
+        <input type="hidden" id="timestamp" name="timestamp">
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="submit-btn">Submit Recipe</button>
+        <button type="button" id="saveAsDraft" class="draft-btn">Save as Draft</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Culinary Canvas</h3>
+        <p>Your creative cooking journey starts here. Discover, create, and share amazing recipes.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Browse Recipes</a></li>
+          <li><a href="#" id="favoritesLink">My Favorites</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: hello@culinarycanvas.com</p>
+        <p>Follow us on social media</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <p>&copy; 2025 Culinary Canvas | Ibrahim Oluwadurotimi | WDD 231 Final Project</p>
+    </div>
+  </footer>
+</body>
+
+</html>
